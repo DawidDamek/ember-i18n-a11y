@@ -3,6 +3,7 @@
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'accessibility-app',
+    podModulePrefix: 'accessibility-app/pods',
     environment,
     rootURL: '/',
     locationType: 'history',

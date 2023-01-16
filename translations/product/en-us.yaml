@@ -1,0 +1,5 @@
+product:
+  show: show details
+  terms: Please <b>accept</b> our '<'a href="{url}"'>'terms & conditions'</a>'
+  back: Back
+  select: Choose an option

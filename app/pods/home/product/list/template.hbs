@@ -1,0 +1,55 @@
+{{page-title 'List'}}
+<div class='d-flex my-5 justify-content-center'>
+
+  <div class='card mx-3' style='width: 18rem;'>
+    <img
+      src='https://erharowery.pl/wp-content/uploads/2021/07/Rower-miejski-KANDS-Escape-26-3BN-alu-3-biegi-mietowo-bialy-mat-scaled.jpg'
+      class='card-img-top'
+      alt='bike'
+    />
+    <div class='card-body'>
+      <h5 class='card-title'>{{t 'product.bike.name'}}</h5>
+      <p class='card-text'>{{t 'product.bike.description'}}</p>
+      <LinkTo @route='home.bike'>
+        <button type='button' class='btn btn-primary'>
+          {{t 'product.show'}}
+        </button>
+      </LinkTo>
+    </div>
+  </div>
+  <div class='card mx-3' style='width: 18rem;'>
+    <img
+      src='https://www.zielonezabawki.pl/data/gfx/pictures/medium/4/0/25704_1.jpg'
+      class='card-img-top'
+      alt='doll'
+    />
+    <div class='card-body'>
+      <h5 class='card-title'>{{t 'product.doll.name'}}</h5>
+      <p class='card-text'>
+        {{t 'product.doll.description' default='errors.missing_translation'}}
+      </p>
+      <LinkTo @route='home.doll'>
+        <button type='button' class='btn btn-primary'>
+          {{t 'product.show'}}
+        </button>
+      </LinkTo>
+    </div>
+  </div>
+  <div class='card mx-3' style='width: 18rem;'>
+    <img
+      src='https://bi.im-g.pl/im/a4/50/1b/z28639652Q,Cupra-Formentor-VZ5-Taiga-Grey.jpg'
+      class='card-img-top'
+      alt='car'
+    />
+    <div class='card-body'>
+      <h5 class='card-title'>{{t 'product.car.name'}}</h5>
+      <p class='card-text'>{{t 'product.car.description'}}</p>
+      <LinkTo @route='home.car'>
+        <button type='button' class='btn btn-primary'>
+          {{t 'product.show'}}
+        </button>
+      </LinkTo>
+    </div>
+  </div>
+</div>
+{{t 'product.terms' url='https://google.com' htmlSafe=true}}

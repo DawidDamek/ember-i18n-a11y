@@ -1,0 +1,4 @@
+product:
+  car:
+    name: Car
+    description: this is our cool car description

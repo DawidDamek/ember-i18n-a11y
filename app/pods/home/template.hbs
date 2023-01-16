@@ -1,0 +1,17 @@
+{{page-title 'Home'}}
+NAWBAR
+<div class='d-flex justify-content-end'>
+  <button
+    class='btn btn-primary mx-1'
+    type='button'
+    value='en-us'
+    {{on 'click' this.onSetLanguage}}
+  >Angielski</button>
+  <button
+    class='btn btn-primary mx-1'
+    type='button'
+    value='pl-pl'
+    {{on 'click' this.onSetLanguage}}
+  >Polski</button>
+</div>
+{{outlet}}
