@@ -1,4 +1,4 @@
-<div class='input-group mb-3'>
+<div class='input-group mb-3 w-50 mx-auto'>
   <input
     type='number'
     class='form-control'
@@ -7,4 +7,7 @@
     aria-describedby='basic-addon1'
     {{on 'change' this.setProductNumber}}
   />
+</div>
+<div class='text-center'>
+  {{t 'product.number' numItems=this.productNumber htmlSafe=true}}
 </div>

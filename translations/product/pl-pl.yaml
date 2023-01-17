@@ -3,3 +3,4 @@ product:
   terms: Proszę <b>zaakceptuj</b> nasze '<'a href="{url}"'>'zasady i warunki'</a>'
   back: Wstecz
   select: wybierz opcję
+  number: 'Zamawiasz {numItems, plural, =0 {nic} =1 {jedną rzecz} other {# rzeczy}}. '
