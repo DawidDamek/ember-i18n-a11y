@@ -1,1 +1,10 @@
 @import 'bootstrap';
+
+.darkmode {
+  background-color: #292929;
+  color: white;
+}
+
+.darkmode .card {
+  background-color: #3d3d3d;
+}

@@ -15,4 +15,17 @@ export default class HomeController extends Controller {
     await this.settings.set('language', language);
     this.intl.setLocale([language]);
   }
+
+  get today() {
+    return new Date();
+  }
+
+  @action
+  setDarkMode() {
+    document.body.classList.add('darkmode');
+  }
+  @action
+  setLightMode() {
+    document.body.classList.remove('darkmode');
+  }
 }

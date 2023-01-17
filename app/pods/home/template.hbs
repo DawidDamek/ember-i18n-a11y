@@ -1,19 +1,56 @@
 {{page-title 'Home'}}
-NAWBAR
-<div class='d-flex justify-content-end'>
-  <button
-    class='btn btn-primary mx-1'
-    type='button'
-    value='en-us'
-    {{on 'click' this.onSetLanguage}}
-  >Angielski</button>
-  <button
-    class='btn btn-primary mx-1'
-    type='button'
-    value='pl-pl'
-    {{on 'click' this.onSetLanguage}}
-  >Polski</button>
-</div>
+<nav class='navbar navbar-expand-lg bg-body-tertiary'>
+  <div class='container-fluid'>
+    <div class='collapse navbar-collapse' id='navbarNavDropdown'>
+      <ul class='navbar-nav'>
+        <li class='nav-item'>
+          <button
+            class='btn btn-primary mx-1'
+            type='button'
+            value='en-us'
+            aria-label='english'
+            {{on 'click' this.onSetLanguage}}
+          >Angielski</button>
+        </li>
+        <li class='nav-item'>
+          <button
+            class='btn btn-primary mx-1'
+            type='button'
+            value='pl-pl'
+            aria-label='polish'
+            {{on 'click' this.onSetLanguage}}
+          >Polski</button>
+        </li>
+        <li class='nav-item'>
+          <button
+            class='btn btn-primary mx-1'
+            type='button'
+            value='pl-pl'
+            aria-label='light mode'
+            {{on 'click' this.setDarkMode}}
+          >{{t 'product.dark_mode'}}</button>
+        </li>
+        <li class='nav-item'>
+          <button
+            class='btn btn-primary mx-1'
+            type='button'
+            value='pl-pl'
+            aria-label='light mode'
+            {{on 'click' this.setLightMode}}
+          >{{t 'product.light_mode'}}</button>
+        </li>
+        <li class='nav-item'>
+          Today:
+          {{format-date this.today}}
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div class='container'>
-  {{outlet}}
+  <section aria-label='product list'>
+    {{outlet}}
+  </section>
 </div>

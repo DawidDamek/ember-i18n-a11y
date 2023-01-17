@@ -4,3 +4,5 @@ product:
   back: Back
   select: Choose an option
   number: 'You are ordering {numItems, plural, =0 {nothing} =1 {one item} other {# items}}.'
+  light_mode: Light mode
+  dark_mode: Dark mode
