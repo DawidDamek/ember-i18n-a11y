@@ -10,14 +10,12 @@
     <div class='card-body'>
       <h5 class='card-title'>{{t 'product.bike.name'}}</h5>
       <p class='card-text'>{{t 'product.bike.description'}}</p>
-      <LinkTo @route='home.bike'>
-        <button
-          type='button'
-          class='btn btn-primary'
-          aria-label='show details bike'
-        >
-          {{t 'product.show'}}
-        </button>
+      <LinkTo
+        @route='home.bike'
+        class='btn btn-primary'
+        aria-label='bike details'
+      >
+        {{t 'product.show'}}
       </LinkTo>
     </div>
   </div>
@@ -32,14 +30,12 @@
       <p class='card-text'>
         {{t 'product.doll.description' default='errors.missing_translation'}}
       </p>
-      <LinkTo @route='home.doll'>
-        <button
-          type='button'
-          class='btn btn-primary'
-          aria-label='show details doll'
-        >
-          {{t 'product.show'}}
-        </button>
+      <LinkTo
+        aria-label='doll details'
+        class='btn btn-primary'
+        @route='home.doll'
+      >
+        {{t 'product.show'}}
       </LinkTo>
     </div>
   </div>
@@ -52,14 +48,12 @@
     <div class='card-body'>
       <h5 class='card-title'>{{t 'product.car.name'}}</h5>
       <p class='card-text'>{{t 'product.car.description'}}</p>
-      <LinkTo @route='home.car'>
-        <button
-          type='button'
-          class='btn btn-primary'
-          aria-label='show details car'
-        >
-          {{t 'product.show'}}
-        </button>
+      <LinkTo
+        aria-label='car details'
+        class='btn btn-primary'
+        @route='home.car'
+      >
+        {{t 'product.show'}}
       </LinkTo>
     </div>
   </div>

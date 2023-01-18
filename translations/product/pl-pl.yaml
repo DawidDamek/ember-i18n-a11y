@@ -1,7 +1,7 @@
 product:
   show: pokaz detale
   terms: Proszę <b>zaakceptuj</b> nasze '<'a href="{url}"'>'zasady i warunki'</a>'
-  back: Wstecz
+  back: Powrót do menu
   select: wybierz opcję
   number: 'Zamawiasz {numItems, plural, =0 {nic} =1 {jedną rzecz} other {# rzeczy}}. '
   light_mode: Tryb jasny

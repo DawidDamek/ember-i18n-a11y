@@ -8,7 +8,7 @@
             class='btn btn-primary mx-1'
             type='button'
             value='en-us'
-            aria-label='english'
+            aria-label='english language'
             {{on 'click' this.onSetLanguage}}
           >English</button>
         </li>
@@ -17,7 +17,7 @@
             class='btn btn-primary mx-1'
             type='button'
             value='pl-pl'
-            aria-label='polish'
+            aria-label='polish language'
             {{on 'click' this.onSetLanguage}}
           >Polski</button>
         </li>
@@ -25,8 +25,7 @@
           <button
             class='btn btn-primary mx-1'
             type='button'
-            value='pl-pl'
-            aria-label='light mode'
+            aria-label='dark mode'
             {{on 'click' this.setDarkMode}}
           >{{t 'product.dark_mode'}}</button>
         </li>
@@ -34,7 +33,6 @@
           <button
             class='btn btn-primary mx-1'
             type='button'
-            value='pl-pl'
             aria-label='light mode'
             {{on 'click' this.setLightMode}}
           >{{t 'product.light_mode'}}</button>
@@ -50,7 +48,7 @@
 </nav>
 
 <div class='container'>
-  <section aria-label='product list'>
+  <section>
     {{outlet}}
   </section>
 </div>
