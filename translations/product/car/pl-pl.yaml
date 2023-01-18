@@ -1,4 +1,5 @@
 product:
   car:
     name: Auto
-    description: To jest opis naszego fajnego auta
+    description: To jest opis naszego fajnego auta.
+    description_extended: To jest opis naszego fajnego auta. To jest opis naszego fajnego auta. To jest opis naszego fajnego auta.

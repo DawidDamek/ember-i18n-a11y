@@ -1,4 +1,5 @@
 product:
   bike:
     name: Rower
-    description: To jest opis naszego fajnego rowera
+    description: To jest opis naszego fajnego rowera.
+    description_extended: To jest opis naszego fajnego rowera. To jest opis naszego fajnego rowera. To jest opis naszego fajnego rowera.

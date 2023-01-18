@@ -1,4 +1,5 @@
 product:
   doll:
     name: Doll
-    description: this is our cool doll description
+    description: this is our cool doll description.
+    description_extended: this is our cool doll description. this is our cool doll description. this is our cool doll description.

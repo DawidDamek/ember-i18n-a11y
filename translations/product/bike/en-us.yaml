@@ -2,3 +2,4 @@ product:
   bike:
     name: Bike
     description: this is our cool bike description
+    description_extended: this is our cool bike description. this is our cool bike description. this is our cool bike description

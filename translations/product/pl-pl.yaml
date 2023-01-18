@@ -6,3 +6,4 @@ product:
   number: 'Zamawiasz {numItems, plural, =0 {nic} =1 {jedną rzecz} other {# rzeczy}}. '
   light_mode: Tryb jasny
   dark_mode: Tryb ciemny
+  today: dzisiejsza data
