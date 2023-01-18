@@ -9,6 +9,10 @@ export default class ApplicationRoute extends Route {
 
   async beforeModel() {
     const language = await this.settings.get('language');
+    const darkMode = await this.settings.get('darkMode');
     this.intl.setLocale([language]);
+    if (darkMode) {
+      document.body.classList.add('darkmode');
+    }
   }
 }

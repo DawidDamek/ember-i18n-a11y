@@ -4,7 +4,7 @@ const Storage = StorageObject.extend();
 
 Storage.reopenClass({
   initialState() {
-    return { language: 'en-us' };
+    return { language: 'en-us', darkMode: false };
   },
 });
 

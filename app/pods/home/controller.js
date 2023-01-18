@@ -21,11 +21,13 @@ export default class HomeController extends Controller {
   }
 
   @action
-  setDarkMode() {
+  async setDarkMode() {
+    await this.settings.set('darkMode', true);
     document.body.classList.add('darkmode');
   }
   @action
-  setLightMode() {
+  async setLightMode() {
+    await this.settings.set('language', false);
     document.body.classList.remove('darkmode');
   }
 }
