@@ -1,9 +1,9 @@
 import { module, test } from 'qunit';
 import { visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'accessibility-app/tests/helpers';
-import a11yAudit from 'ember-a11y-testing/test-support/audit';
+import { a11yAudit } from 'ember-a11y-testing/test-support';
 
-module('Acceptance | car', function (hooks) {
+module('Accessability | car', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /car', async function (assert) {
