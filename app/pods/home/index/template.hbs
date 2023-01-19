@@ -1,4 +1,5 @@
 {{page-title 'List'}}
+<h1 class='text-center'>Products</h1>
 <div class='d-flex my-5 justify-content-center'>
 
   <div class='card mx-3' style='width: 18rem;'>
@@ -8,7 +9,7 @@
       alt='bike'
     />
     <div class='card-body'>
-      <h5 class='card-title'>{{t 'product.bike.name'}}</h5>
+      <h2 class='card-title'>{{t 'product.bike.name'}}</h2>
       <p class='card-text'>{{t 'product.bike.description'}}</p>
       <LinkTo
         @route='home.bike'
@@ -26,7 +27,7 @@
       alt='doll'
     />
     <div class='card-body'>
-      <h5 class='card-title'>{{t 'product.doll.name'}}</h5>
+      <h2 class='card-title'>{{t 'product.doll.name'}}</h2>
       <p class='card-text'>
         {{t 'product.doll.description' default='errors.missing_translation'}}
       </p>
@@ -46,7 +47,7 @@
       alt='car'
     />
     <div class='card-body'>
-      <h5 class='card-title'>{{t 'product.car.name'}}</h5>
+      <h2 class='card-title'>{{t 'product.car.name'}}</h2>
       <p class='card-text'>{{t 'product.car.description'}}</p>
       <LinkTo
         aria-label='car details'

@@ -1,5 +1,5 @@
 {{page-title 'Home'}}
-<nav class='navbar navbar-expand-lg bg-body-tertiary'>
+<nav class='navbar navbar-expand-lg bg-body-tertiary' role='navigation'>
   <div class='container-fluid'>
     <div class='collapse navbar-collapse' id='navbarNavDropdown'>
       <ul class='navbar-nav'>
@@ -48,9 +48,9 @@
 </nav>
 
 <div class='container'>
-  <section>
+  <section role='main'>
     {{outlet}}
   </section>
 </div>
-
+<button type='button' {{on 'click' this.auditA11Y}}> asd</button>
 <img src='' alt='' style='width: 500px; height: 500px;' />
