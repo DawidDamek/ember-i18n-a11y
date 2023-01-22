@@ -2,6 +2,7 @@
 <h1 class='text-center'>Products</h1>
 <div class='d-flex my-5 justify-content-center'>
 
+  {{! template-lint-disable no-inline-styles }}
   <div class='card mx-3' style='width: 18rem;'>
     <img
       src='https://erharowery.pl/wp-content/uploads/2021/07/Rower-miejski-KANDS-Escape-26-3BN-alu-3-biegi-mietowo-bialy-mat-scaled.jpg'
@@ -16,7 +17,7 @@
         class='btn btn-primary'
         aria-label='bike details'
       >
-        {{t 'product.show'}}
+        {{t 'general.show'}}
       </LinkTo>
     </div>
   </div>
@@ -36,7 +37,7 @@
         class='btn btn-primary'
         @route='home.doll'
       >
-        {{t 'product.show'}}
+        {{t 'general.show'}}
       </LinkTo>
     </div>
   </div>
@@ -54,11 +55,11 @@
         class='btn btn-primary'
         @route='home.car'
       >
-        {{t 'product.show'}}
+        {{t 'general.show'}}
       </LinkTo>
     </div>
   </div>
 </div>
 <footer class='text-center'>
-  {{t 'product.terms' url='https://google.com' htmlSafe=true}}
+  {{t 'general.terms' url='https://google.com' htmlSafe=true}}
 </footer>

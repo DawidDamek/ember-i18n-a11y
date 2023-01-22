@@ -1,0 +1,10 @@
+general:
+  show: show details
+  terms: Please <b>accept</b> our '<'a href="{url}"'>'terms & conditions'</a>'
+  back: Back to menu
+  select: Choose an option
+  number: 'You are ordering {numItems, plural, =0 {nothing} =1 {one item} other {# items}}.'
+  light_mode: Light mode
+  dark_mode: Dark mode
+  today: date today
+  display_mode: Display mode

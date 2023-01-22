@@ -4,10 +4,12 @@ import { storageFor } from 'ember-local-storage';
 import { inject as service } from '@ember/service';
 import axe from 'axe-core';
 import { scheduleOnce } from '@ember/runloop';
+import { tracked } from '@glimmer/tracking';
 
 export default class HomeController extends Controller {
   @service intl;
   @service store;
+  @tracked isDarkMode = this.settings.get('darkMode');
 
   @storageFor('settings') settings;
 
@@ -23,21 +25,16 @@ export default class HomeController extends Controller {
   }
 
   @action
-  async setDarkMode() {
-    await this.settings.set('darkMode', true);
-    document.body.classList.add('darkmode');
-  }
-  @action
-  async setLightMode() {
-    await this.settings.set('language', false);
-    document.body.classList.remove('darkmode');
+  async toggleMode() {
+    this.auditA11Y();
+    this.isDarkMode = !this.isDarkMode;
+    await this.settings.set('darkMode', this.isDarkMode);
+    document.body.classList.toggle('darkmode');
   }
 
-  @action
   auditA11Y() {
     // eslint-disable-next-line ember/no-incorrect-calls-with-inline-anonymous-functions
     scheduleOnce('afterRender', this, () => {
-      console.log('dasad');
       axe.run().then(({ violations }) => {
         if (violations.length) {
           violations.map(

@@ -1,56 +1,62 @@
 {{page-title 'Home'}}
-<nav class='navbar navbar-expand-lg bg-body-tertiary' role='navigation'>
-  <div class='container-fluid'>
-    <div class='collapse navbar-collapse' id='navbarNavDropdown'>
-      <ul class='navbar-nav'>
-        <li class='nav-item'>
-          <button
-            class='btn btn-primary mx-1'
-            type='button'
-            value='en-us'
-            aria-label='english language'
-            {{on 'click' this.onSetLanguage}}
-          >English</button>
-        </li>
-        <li class='nav-item'>
-          <button
-            class='btn btn-primary mx-1'
-            type='button'
-            value='pl-pl'
-            aria-label='polish language'
-            {{on 'click' this.onSetLanguage}}
-          >Polski</button>
-        </li>
-        <li class='nav-item'>
-          <button
-            class='btn btn-primary mx-1'
-            type='button'
-            aria-label='dark mode'
-            {{on 'click' this.setDarkMode}}
-          >{{t 'product.dark_mode'}}</button>
-        </li>
-        <li class='nav-item'>
-          <button
-            class='btn btn-primary mx-1'
-            type='button'
-            aria-label='light mode'
-            {{on 'click' this.setLightMode}}
-          >{{t 'product.light_mode'}}</button>
-        </li>
-        <li class='nav-item'>
-          {{t 'product.today'}}
-          {{format-date this.today}}
-        </li>
-
-      </ul>
+<section {{did-insert this.auditA11Y}}>
+  <nav class='navbar navbar-expand-lg bg-body-tertiary' role='navigation'>
+    <div class='container-fluid'>
+      <div class='collapse navbar-collapse' id='navbarNavDropdown'>
+        <ul class='navbar-nav'>
+          <li class='nav-item'>
+            <button
+              class='btn btn-primary mx-1'
+              type='button'
+              value='en-us'
+              aria-label='english language'
+              {{on 'click' this.onSetLanguage}}
+            >English</button>
+          </li>
+          <li class='nav-item'>
+            <button
+              class='btn btn-primary mx-1'
+              type='button'
+              value='pl-pl'
+              aria-label='polish language'
+              {{on 'click' this.onSetLanguage}}
+            >Polski</button>
+          </li>
+          <li class='nav-item d-flex align-items-center mx-5'>
+            <label class='form-check-label' for='flexSwitchCheckDefault'>
+              {{t 'general.display_mode'}}
+            </label>
+            <span class='mx-2'>☀️</span>
+            <div class='form-check form-switch'>
+              {{! template-lint-disable require-input-label }}
+              <input
+                class='form-check-input'
+                type='checkbox'
+                role='switch'
+                id='flexSwitchCheckDefault'
+                aria-label='display mode'
+                checked={{this.isDarkMode}}
+                {{on 'change' this.toggleMode}}
+              />
+              🌙
+            </div>
+          </li>
+          <li class='nav-item d-flex align-items-center'>
+            {{t 'general.today'}}
+            {{format-date this.today}}
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<div class='container'>
-  <section role='main'>
-    {{outlet}}
-  </section>
-</div>
-<button type='button' {{on 'click' this.auditA11Y}}> asd</button>
-<img src='' alt='' style='width: 500px; height: 500px;' />
+  <div class='container'>
+    <section role='main'>
+      {{outlet}}
+    </section>
+  </div>
+  <img src='' alt='' style='width: 500px; height: 500px;' />
+  <input type='text' />
+
+  <h5>tekst h5 <h1>tekst h1</h1></h5>
+</section>
