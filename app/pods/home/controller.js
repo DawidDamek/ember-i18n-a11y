@@ -5,6 +5,9 @@ import { inject as service } from '@ember/service';
 import axe from 'axe-core';
 import { scheduleOnce } from '@ember/runloop';
 import { tracked } from '@glimmer/tracking';
+import ENV from 'accessibility-app/config/environment';
+
+const isTesting = ENV.environment === 'test';
 
 export default class HomeController extends Controller {
   @service intl;
@@ -33,6 +36,9 @@ export default class HomeController extends Controller {
   }
 
   auditA11Y() {
+    if (isTesting) {
+      return;
+    }
     // eslint-disable-next-line ember/no-incorrect-calls-with-inline-anonymous-functions
     scheduleOnce('afterRender', this, () => {
       axe.run().then(({ violations }) => {
