@@ -1,13 +1,18 @@
-<div class='input-group mb-3 w-50 mx-auto'>
-  <input
-    type='number'
-    class='form-control'
-    placeholder={{t 'general.select'}}
-    aria-label='Username'
-    aria-describedby='basic-addon1'
-    {{on 'change' this.setProductNumber}}
-  />
-</div>
-<div class='text-center'>
-  {{t 'general.number' numItems=this.productNumber htmlSafe=true}}
-</div>
+<section>
+  <header>
+    <h2 class='text-center'>{{t 'general.add_product'}}</h2>
+  </header>
+  <div class='input-group mb-3 w-50 mx-auto'>
+    <input
+      type='number'
+      class='form-control'
+      placeholder={{t 'general.select'}}
+      aria-label='Username'
+      aria-describedby='basic-addon1'
+      {{on 'change' this.setProductNumber}}
+    />
+  </div>
+  <div class='text-center'>
+    {{t 'general.number' numItems=this.productNumber htmlSafe=true}}
+  </div>
+</section>

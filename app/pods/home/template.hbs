@@ -1,5 +1,5 @@
 {{page-title 'Home'}}
-<section {{did-insert this.auditA11Y}}>
+<div {{did-insert this.auditA11Y}}>
   <nav class='navbar navbar-expand-lg bg-body-tertiary' role='navigation'>
     <div class='container-fluid'>
       <div class='collapse navbar-collapse' id='navbarNavDropdown'>
@@ -55,8 +55,11 @@
       {{outlet}}
     </section>
   </div>
+  <footer class='text-center'>
+    {{t 'general.terms' url='https://google.com' htmlSafe=true}}
+  </footer>
   <img src='' alt='' style='width: 500px; height: 500px;' />
   <input type='text' />
 
   <h5>tekst h5 <h1>tekst h1</h1></h5>
-</section>
+</div>
